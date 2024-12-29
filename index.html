@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Link</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">
+            <img src="https://fygaro-subscribers.s3.amazonaws.com/d3fe9c31-a4b2-4308-8a76-f771c482a512/logo/116eb5b9-ab2e-499e-8667-708f18e25c8c.png" alt="Logo" class="h-16 mx-auto">
+            <span class="text-gray-700">FooodApp</span>
+            <br>
+            <span class="text-gray-700">Pay with Bitcoin</span>
+        </h2>
+        <form id="paymentForm" class="space-y-4">
+            <div>
+                <label class="block text-gray-700">Amount</label>
+                <input type="number" name="amount" id="amount" class="w-full px-3 py-2 border rounded" required>
+            </div>
+            <input type="hidden" name="phoneNumber" id="phoneNumber">
+            <div>
+                <label class="block text-gray-700">Store</label>
+                <select name="appId" id="appId" class="w-full px-3 py-2 border rounded" required>
+                    <option value="">Select a store</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded">Pay Now</button>
+        </form>
+        <div id="error" class="mt-4 text-red-500"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html> 
